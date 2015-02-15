@@ -12,6 +12,7 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/styles.css">
+        <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -27,24 +28,36 @@
 		    <a href="#section-3" id="anchor3">Section 3</a>
 		  </nav>
 		</header>
-		
+
 		<div class="full-screen" id="intro" role="main">
-		  <section class="full-screen blue" id="start">
-		    <h1>Anchor Navigation</h1>
+		  <section class="full-screen boston" id="start">
+		    <h1 id = "name" class="name">I Am Asaph</h1>
 		  </section>
-		
+
+      <section id="pinned-trigger1" class="full-screen orange">
+        <div id="pinned-element1">
+          <p>This element will be pinned for the half the window height</p>
+        </div>
+      </section>
+
+      <section id="scale-trigger" class="full-screen red">
+        <div id="scale-animation">
+          <p>This element will scale down using the scale value of the CSS transform property.</p>
+        </div>
+      </section>
+
 		  <section class="full-screen orange" id="section-1">
 		    <div>
 		      <p>Section Uno</p>
 		    </div>
 		  </section>
-		
+
 		  <section class="full-screen red" id="section-2">
 		    <div>
 		      <p>Section Dos</p>
 		    </div>
 		  </section>
-		
+
 		  <section class="full-screen blue" id="section-3">
 		    <div>
 		      <p>Section Tres</p>

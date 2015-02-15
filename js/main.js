@@ -7,6 +7,21 @@ var controller = new ScrollMagic({
   }
 });
 
+// init ScrollMagic Controller
+controller2 = new ScrollMagic();
+
+// Scale Animation Setup
+// .to('@target', @length, {@object})
+var scale_tween = TweenMax.to('#scale-animation', 1, {
+  transform: 'scale(.75)',
+  ease: Linear.easeNone
+});
+
+// var scale_tween2 = TweenMax.to('#name', 1, {
+//   transform: 'scale(.75)',
+//   ease: Linear.easeNone
+// });
+
 new ScrollScene({triggerElement: '#intro'})
 								.setClassToggle('#intro-anchor', 'active')
 								.addTo(controller);
@@ -37,7 +52,6 @@ controller.scrollTo(function(target) {
 
 //  Bind scroll to anchor links
 $(document).on("click", "a[href^=#]", function(e) {
-  alert('thisworks');
   var id = $(this).attr("href");
 
   if($(id).length > 0) {
@@ -51,5 +65,46 @@ $(document).on("click", "a[href^=#]", function(e) {
       history.pushState("", document.title, id);
     }
   }
-
 });
+
+// Scale Scene
+var scale_scene = new ScrollScene({
+  triggerElement: '#scale-trigger',
+  triggerHook: 0 // don't trigger until #pinned-trigger1 hits the top of the viewport
+})
+.setTween(scale_tween);
+
+// // Scale Scene
+// var scale_scene = new ScrollScene({
+//   triggerElement: '#intro',
+//   offset: 200,
+//   triggerHook: 0 // don't trigger until #pinned-trigger1 hits the top of the viewport
+// })
+// .setTween(scale_tween2);
+
+var scrolltonav = TweenMax.to(".name", 0.5, {
+  autoAlpha: 0,
+  y: 150,
+  scale: 0.7,
+  force3D:true
+});
+
+var scene2 = new ScrollScene({
+    duration: 350,
+    triggerHook: "onLeave"
+})
+.setTween(scrolltonav)
+.addTo(controller2);
+
+var pinned_scene = new ScrollScene({
+  triggerElement: "#pinned-trigger1", // point of execution
+  duration: $(window).height() - 100, // pin element for the window height - 1
+  triggerHook: "onExit", // don't trigger until #pinned-trigger1 hits the top of the viewport
+  reverse: true // allows the effect to trigger when scrolled in the reverse direction
+})
+.setPin("#pinned-element1"); // the element we want to pin
+
+controller2.addScene([
+  scale_scene,
+  pinned_scene
+]);

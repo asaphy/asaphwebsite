@@ -20,10 +20,11 @@ a.active {
   text-decoration: underline;
 }
 
-h1,
-p {
-  margin: 0;
-  padding: 0;
+h1{
+  font-size: 72px;
+  font-weight: 100;
+  font-family: 'Poiret One', 'helvetica';
+  margin: 0 0 30% 0;
 }
 
 header {
@@ -42,6 +43,14 @@ section {
 
 .full-screen {
   height: 100%; /* makes panels the entire window height */
+}
+
+.boston {
+  background: url("../img/background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .blue {
