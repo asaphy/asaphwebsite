@@ -8,11 +8,25 @@ body {
 }
 
 a {
+  float: right;
   color: white;
   text-decoration: none;
   font-size: 24px;
   font-family: 'helvetica';
   font-weight: 100;
+}
+
+#fixednavbar a {
+  color: black;
+}
+
+#fixednavbar a:hover {
+  color: white;
+  background-color: black;
+}
+
+#fixednavbar a.active {
+  color: lightgray;
 }
 
 a:hover {
@@ -24,10 +38,12 @@ a.active {
 }
 
 h1{
-  font-size: 72px;
+  font-size: 96px;
   font-weight: 100;
   font-family: 'Poiret One', 'helvetica';
-  padding-bottom: 25%;
+  background: -webkit-linear-gradient(#c0392b, #2980b9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 section {
@@ -66,7 +82,7 @@ section {
 }
 
 #navbar {
-  margin-top: 50%;
+  margin-top: 40%;
 }
 
 #fixednavbar {
@@ -75,8 +91,9 @@ section {
   left: 0;
   z-index: 9999;
   width: 100%;
-  height: 50px;
-  background-color: black;
+  height: 74px;
+  background-color: white;
+  color: black;
   display: none;
 }
 
@@ -85,5 +102,10 @@ section {
 }
 
 #iamasaph{
-  margin: 0 0 20% 0 ;
+  margin: 0 0 25% 0 ;
+}
+
+#intro-anchor{
+  float: left;
+  height: 74px;
 }
