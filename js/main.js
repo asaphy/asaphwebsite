@@ -1,3 +1,15 @@
+var waypoint = new Waypoint({
+  element: document.getElementById('scale-trigger'),
+  handler: function(direction) {
+    if (direction === 'down') {
+      $(document.getElementById('fixednavbar')).show();
+    }
+    else {
+      $(document.getElementById('fixednavbar')).hide();
+    }
+  }
+})
+
 // Init controller
 var controller = new ScrollMagic({
   globalSceneOptions: {
@@ -65,7 +77,7 @@ $(document).on("click", "a[href^=#]", function(e) {
       history.pushState("", document.title, id);
     }
   }
-});
+})
 
 // Scale Scene
 var scale_scene = new ScrollScene({
@@ -73,7 +85,6 @@ var scale_scene = new ScrollScene({
   triggerHook: 0 // don't trigger until #pinned-trigger1 hits the top of the viewport
 })
 .setTween(scale_tween);
-
 // // Scale Scene
 // var scale_scene = new ScrollScene({
 //   triggerElement: '#intro',
@@ -85,7 +96,7 @@ var scale_scene = new ScrollScene({
 var scrolltonav = TweenMax.to(".name", 0.5, {
   autoAlpha: 0,
   y: 150,
-  scale: 0.7,
+  scale: 0.75,
   force3D:true
 });
 

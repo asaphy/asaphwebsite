@@ -20,25 +20,30 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <header role="banner">
+    <div id="fixednavbar">
 		  <nav role='navigation'>
-		    <a href="#intro" id="intro-anchor">Intro</a>
-		    <a href="#section-1" id="anchor1">Section 1</a>
-		    <a href="#section-2" id="anchor2">Section 2</a>
-		    <a href="#section-3" id="anchor3">Section 3</a>
+		    <a href="#intro" id="intro-anchor">home</a>
+        <a href="#section-1" id="anchor1">about me</a>
+		    <a href="#section-2" id="anchor2">projects</a>
+		    <a href="#section-3" id="anchor3">blog</a>
+		    <a href="#section-4" id="anchor4">contact me</a>
 		  </nav>
-		</header>
+		</div>
 
 		<div class="full-screen" id="intro" role="main">
 		  <section class="full-screen boston" id="start">
-		    <h1 id = "name" class="name">I Am Asaph</h1>
-		  </section>
-
-      <section id="pinned-trigger1" class="full-screen orange">
-        <div id="pinned-element1">
-          <p>This element will be pinned for the half the window height</p>
+		    <div id="iamasaph">
+          <h1 class="name">I Am Asaph</h1>
         </div>
-      </section>
+        <div id="navbar">
+          <nav role='navigation'>
+            <a href="#section-1" id="anchor1">About Me</a>
+            <a href="#section-2" id="anchor2">Projects</a>
+            <a href="#section-3" id="anchor3">Blog</a>
+            <a href="#section-4" id="anchor4">Contact Me</a>
+          </nav>
+        </div>
+		  </section>
 
       <section id="scale-trigger" class="full-screen red">
         <div id="scale-animation">
@@ -63,12 +68,19 @@
 		      <p>Section Tres</p>
 		    </div>
 		  </section>
+      <section class="full-screen orange" id="section-4">
+        <div>
+          <p>Section Cuatro</p>
+        </div>
+      </section>
 		</div>
 		<script src="js/vendor/jquery-1.11.2.min.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="js/vendor/TweenMax.min.js"></script>
         <script src="js/vendor/ScrollToPlugin.min.js"></script>
         <script src="js/vendor/jquery.scrollmagic.min.js"></script>
+        <script src="js/vendor/jquery.waypoints.js"></script>
+        <script src="js/vendor/sticky.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

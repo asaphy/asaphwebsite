@@ -10,27 +10,24 @@ body {
 a {
   color: white;
   text-decoration: none;
+  font-size: 24px;
+  font-family: 'helvetica';
+  font-weight: 100;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: black;
+  background-color: white;
 }
 a.active {
   color: #000;
-  text-decoration: underline;
 }
 
 h1{
   font-size: 72px;
   font-weight: 100;
   font-family: 'Poiret One', 'helvetica';
-  margin: 0 0 30% 0;
-}
-
-header {
-  position: fixed;
-  top: 10px;
-  left: 10px;
+  padding-bottom: 25%;
 }
 
 section {
@@ -61,4 +58,32 @@ section {
 }
 .orange {
 	background-color: #ea6300;
+}
+
+.stuck {
+  position:fixed;
+  top:0;
+}
+
+#navbar {
+  margin-top: 50%;
+}
+
+#fixednavbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  display: none;
+}
+
+#anchor1, #anchor2, #anchor3, #anchor4 {
+  padding: 25px;
+}
+
+#iamasaph{
+  margin: 0 0 20% 0 ;
 }
