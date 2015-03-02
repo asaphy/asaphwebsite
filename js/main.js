@@ -1,5 +1,5 @@
 var waypoint = new Waypoint({
-  element: document.getElementById('scale-trigger'),
+  element: document.getElementById('navbar'),
   handler: function(direction) {
     if (direction === 'down') {
       $(document.getElementById('fixednavbar')).show();
@@ -24,10 +24,10 @@ controller2 = new ScrollMagic();
 
 // Scale Animation Setup
 // .to('@target', @length, {@object})
-var scale_tween = TweenMax.to('#scale-animation', 1, {
-  transform: 'scale(.75)',
-  ease: Linear.easeNone
-});
+// var scale_tween = TweenMax.to('#scale-animation', 1, {
+//   transform: 'scale(.75)',
+//   ease: Linear.easeNone
+// });
 
 // var scale_tween2 = TweenMax.to('#name', 1, {
 //   transform: 'scale(.75)',
@@ -80,11 +80,11 @@ $(document).on("click", "a[href^=#]", function(e) {
 })
 
 // Scale Scene
-var scale_scene = new ScrollScene({
-  triggerElement: '#scale-trigger',
-  triggerHook: 0 // don't trigger until #pinned-trigger1 hits the top of the viewport
-})
-.setTween(scale_tween);
+// var scale_scene = new ScrollScene({
+//   triggerElement: '#scale-trigger',
+//   triggerHook: 0 // don't trigger until #pinned-trigger1 hits the top of the viewport
+// })
+// .setTween(scale_tween);
 // // Scale Scene
 // var scale_scene = new ScrollScene({
 //   triggerElement: '#intro',
@@ -116,7 +116,6 @@ var pinned_scene = new ScrollScene({
 .setPin("#pinned-element1"); // the element we want to pin
 
 controller2.addScene([
-  scale_scene,
   pinned_scene
 ]);
 
