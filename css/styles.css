@@ -16,8 +16,8 @@ a {
 }
 
 #fixednavbar a {
+  font-size: 22px;
   color: black;
-  height: 25px;
   float: right;
 }
 
@@ -49,17 +49,28 @@ h1{
 }
 
 .block { width: 800px; }
-.block #navbar {margin: 15% 0 0 0;}
+
+#navbar{
+  position: absolute;
+  bottom: 50px;
+  margin-left: 12%;
+}
 
 section {
   display: flex;
+/*  justify-content: center;
+  align-items: center;
+  text-align: center;*/
+  color: darkgray;
+  font-weight: 100;
+  font-family: 'Poiret One', 'helvetica';
+}
+
+#start{
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: darkgray;
   font-size: 54px;
-  font-weight: 100;
-  font-family: 'Poiret One', 'helvetica';
 }
 
 .full-screen {
@@ -86,15 +97,15 @@ section {
   left: 0;
   z-index: 9999;
   width: 100%;
-  height: 74px;
+  height: 55px;
   background-color: white;
   color: black;
   display: none;
   border-bottom: solid thin darkgray;
 }
 
-#anchor1, #anchor2, #anchor3, #anchor4 {
-  padding: 25px;
+#anchor1, #anchor2, #anchor3, #anchor4, #intro-anchor {
+  padding: 15px;
 }
 
 #imakethings{
@@ -104,5 +115,42 @@ section {
 
 #fixednavbar #intro-anchor{
   float: left;
-  height: 74px;
 }
+
+#aboutme{
+  margin: 60px auto 0 auto;
+  font-size: 54px;
+}
+
+.placesilived{
+  font-size: 24px;
+  font-weight: 200;
+  margin-left: 30px;
+}
+
+#whereivelived{
+  display:inline-block;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  background: #1878A8;
+  margin: 0 0 0 -20px;
+  padding: 10px 0 10px 10px;
+  width: 350px;
+  color: white;
+  border-left: 10px #0E4561 solid;
+  border-bottom: 1px #0E4561 solid;
+}
+
+ul {
+  list-style-type: none;
+  font-size: 32px;
+}
+
+#mission{
+  font-size: 36px;
+}
+
+.marginauto{
+/*  margin: 0 auto 0 auto;
+*/}
